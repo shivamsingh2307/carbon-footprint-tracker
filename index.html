@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Track, understand, and reduce your carbon footprint with personalized insights and actionable recommendations." />
+  <meta name="theme-color" content="#059669" />
+  <meta http-equiv="Content-Security-Policy" 
+        content="default-src 'self'; 
+               script-src 'self'; 
+               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+               font-src https://fonts.gstatic.com; 
+               img-src 'self' data: blob:; 
+               connect-src 'self';" />
+  <title>EcoTrack — Carbon Footprint Awareness Platform</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/variables.css" />
+  <link rel="stylesheet" href="/src/styles/base.css" />
+  <link rel="stylesheet" href="/src/styles/components.css" />
+  <link rel="stylesheet" href="/src/styles/animations.css" />
+  <link rel="stylesheet" href="/src/styles/accessibility.css" />
+  <link rel="stylesheet" href="/src/styles/responsive.css" />
+</head>
+<body>
+  <!-- Skip Navigation Link -->
+  <a href="#main-content" class="skip-link" id="skip-nav">
+    Skip to main content
+  </a>
+
+  <!-- App Shell -->
+  <div id="app" class="app-container">
+    <!-- Header -->
+    <header class="app-header" role="banner">
+      <div class="header-inner">
+        <div class="logo" aria-label="EcoTrack home">
+          <svg class="logo-icon" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">
+            <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+            <path d="M16 6 C10 10, 8 16, 12 22 C14 20, 16 16, 16 12 C16 16, 18 20, 20 22 C24 16, 22 10, 16 6Z" fill="currentColor"/>
+          </svg>
+          <span class="logo-text">Eco<strong>Track</strong></span>
+        </div>
+        <nav class="main-nav" role="navigation" aria-label="Main navigation">
+          <div id="nav-tabs" role="tablist" aria-label="Application sections"></div>
+        </nav>
+        <div class="header-actions">
+          <div id="theme-toggle-mount"></div>
+          <button class="mobile-menu-btn" id="mobile-menu-toggle" 
+                  aria-label="Toggle navigation menu" 
+                  aria-expanded="false"
+                  aria-controls="nav-tabs">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="app-main" role="main" tabindex="-1">
+      <div id="view-container" class="view-container">
+        <!-- Dynamic content rendered here -->
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer" role="contentinfo">
+      <p>&copy; 2026 EcoTrack. Built with 🌿 for a greener planet.</p>
+    </footer>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+
+  <!-- Modal Container -->
+  <div id="modal-container"></div>
+
+  <!-- Screen Reader Announcements -->
+  <div id="sr-announcements" class="sr-only" aria-live="assertive" aria-atomic="true"></div>
+
+  <script src="/src/boot-check.js"></script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
